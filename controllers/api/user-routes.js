@@ -19,7 +19,6 @@ router.post("/", async (req, res) => {
 
 // Login
 router.post("/login", async (req, res) => {
-  console.log("i need the fetch");
   try {
     const dbUserData = await User.findOne({
       where: {

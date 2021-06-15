@@ -1,5 +1,6 @@
 const router = require("express").Router();
 
+// Render Homepage
 router.get("/", async (req,res) => {
     try{
         res.render("homepage", {
@@ -11,5 +12,9 @@ router.get("/", async (req,res) => {
     }
 });
 
+// Login route
+router.get("/login", (req, res) => {
+    res.render("login");
+  });
 
 module.exports = router;
