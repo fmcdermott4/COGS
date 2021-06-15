@@ -20,7 +20,7 @@ router.post("/login", async(req, res) => {
     try {
         const dbUserData = await ArcUser.findOne({
             where: {
-                email: req.body.username,
+                username: req.body.username,
             },
         });
         if (!dbUserData) {
