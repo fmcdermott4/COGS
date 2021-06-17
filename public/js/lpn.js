@@ -1,23 +1,22 @@
 const lpnForm = async(event) => {
     event.preventDefault();
     const lpn = document.getElementById("lpnInput").value.trim();
-
+    let item;
     if (lpn) {
-        const response = await fetch("/api/lpn", {
+        let response = await fetch("/api/lpn/", {
             method: "POST",
             body: JSON.stringify({ lpn }),
             headers: { "Content-Type": "application/json" },
-        });
+        }).then(response => response.json()).then(data => (item = data));
+        let subcat = item.data.subcat.split(" ")[0];
+        let price = item.data.price;
 
         if (response.ok) {
-            console.log(response);
+            return;
         }
         // setTimeout(function() { //WE NEED THIS FOR A 1 second DELAY
         //     document.location = "/";
         // }, 1000);
-
-    } else {
-        alert("Epic Fail");
     }
 };
 
