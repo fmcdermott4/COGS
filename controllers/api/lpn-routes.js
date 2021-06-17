@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { AmazonItem } = require("../../models");
 
 // find Amazon Item Data
-router.post("/lpn", async(req, res) => {
+router.post("/", async(req, res) => {
     try {
         const dbLpnData = await AmazonItem.findOne({
             where: {
