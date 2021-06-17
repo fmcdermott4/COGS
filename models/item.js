@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class AmazonItem extends Model {};
 
@@ -12,10 +13,10 @@ AmazonItem.init({
     lpn: {
         type: DataTypes.STRING,
     },
-    subcategory: {
+    subcat: {
         type: DataTypes.STRING,
     },
-    cost: {
+    price: {
         type: DataTypes.DOUBLE
     }
 
@@ -24,6 +25,7 @@ AmazonItem.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "amazonitem",
+    modelName: "amazonitems2",
 });
+
 module.exports = AmazonItem;
