@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize');
+const Sequelize = require('sequelize');
 require('dotenv').config();
 
 // const sequelize = new Sequelize(
@@ -35,27 +35,10 @@ const sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PASSWORD, {
-        host: 'arcimsdbsql-production.database.windows.net',
-        Port: 49175,
-        dialect: 'mssql',
+        host: process.env.DB_SERVERNAME,
+        dialect: 'mysql',
+        port: 3306,
+    }
+);
 
-        pool: {
-            max: 5,
-            min: 0,
-            idle: 10000
-        },
-        dialectOptions: {
-            instanceName: 'SQLEXPRESS',
-            requestTimeout: 60000,
-            encrypt: true
-        }
-    });
-sequelize
-    .authenticate()
-    .then(() => {
-        console.log('Connection has been established successfully.');
-    })
-    .catch(err => {
-        console.error('Unable to connect to the database:', err);
-    });
 module.exports = sequelize;

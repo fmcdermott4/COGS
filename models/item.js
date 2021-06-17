@@ -12,12 +12,12 @@ AmazonItem.init({
     lpn: {
         type: DataTypes.STRING,
     },
-    asin: {
-        type: DataTypes.STRING,
-    },
     subcategory: {
         type: DataTypes.STRING,
     },
+    cost: {
+        type: DataTypes.DOUBLE
+    }
 
 }, {
     sequelize,
