@@ -13,7 +13,7 @@ AmazonService.init({
     subcat: {
         type: DataTypes.STRING,
     },
-    sfunctiontest: {
+    functiontest: {
         type: DataTypes.STRING,
     },
     cleaning: {
