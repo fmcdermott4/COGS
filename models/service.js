@@ -1,23 +1,26 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class AmazonItem extends Model {};
+class AmazonService extends Model {};
 
-AmazonItem.init({
+AmazonService.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
     },
-    lpn: {
-        type: DataTypes.STRING,
-    },
     subcat: {
         type: DataTypes.STRING,
     },
-    price: {
-        type: DataTypes.DOUBLE
+    sfunctiontest: {
+        type: DataTypes.STRING,
+    },
+    cleaning: {
+        type: DataTypes.STRING,
+    },
+    rebox: {
+        type: DataTypes.STRING,
     }
 
 }, {
@@ -25,7 +28,7 @@ AmazonItem.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "amazonitems",
+    modelName: "amazonservices",
 });
 
-module.exports = AmazonItem;
+module.exports = AmazonService;
