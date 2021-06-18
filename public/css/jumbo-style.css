@@ -1,91 +1,96 @@
 .jumbotron {
-  /*MIMICS DEPRECATED JUMBOTRON FROM PREVIOUS BS VERSIONS TO BS-5 AND UP*/
-  padding: 4rem 2rem;
-  border-radius: 0;
-  text-align: center;
-  background-color: transparent;
-  color: black;
+    /*MIMICS DEPRECATED JUMBOTRON FROM PREVIOUS BS VERSIONS TO BS-5 AND UP*/
+    padding: 4rem 2rem;
+    border-radius: 0;
+    text-align: center;
+    background-color: transparent;
+    color: black;
 }
 
 .card-body {
-  font-size: 1.4rem;
-  text-align: center;
-  font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: bold;
 }
 
 .text-box-container {
-  text-align: center;
+    text-align: center;
 }
 
 .transparent {
-  opacity: 20%;
+    opacity: 20%;
 }
 
 .memeSubmission {
-  width: 100%;
-  padding: 5px;
-  color: var(--light);
+    width: 100%;
+    padding: 5px;
+    color: var(--light);
 }
 
 .mh75 {
-  min-height: 75%;
-  height: 200px;
+    min-height: 75%;
+    height: 200px;
 }
 
 main {
-  background-color: rgb(87, 87, 128);
+    background-color: rgb(87, 87, 128);
 }
 
 .bg-med-gray {
-  background-color: #c3c3c4;
+    background-color: #c3c3c4;
 }
 
 .my-w {
-  width: 100%;
-  max-width: 1200px !important;
-  /* height: 100vh */
+    width: 100%;
+    max-width: 1200px !important;
+    /* height: 100vh */
 }
 
 .uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 992px) {
-  .view-height {
-    height: 100vh;
-  }
-  .login-row {
-    width: 100vw;
-  }
+    .view-height {
+        height: 100vh;
+    }
+    .login-row {
+        width: 100vw;
+    }
 }
 
 .text-uppercase {
-  color: white;
+    color: white;
 }
 
 .dark {
-  color: black;
+    color: black;
 }
 
 #lowerTextHeader,
 #upperTextHeader {
-  cursor: move;
-  z-index: 10;
+    cursor: move;
+    z-index: 10;
 }
 
 #lowerText,
 #upperText {
-  position: absolute;
-  z-index: 9;
-  text-align: center;
+    position: absolute;
+    z-index: 9;
+    text-align: center;
 }
 
 #upperText {
-  top: 100px;
-  left: 150px;
+    top: 100px;
+    left: 150px;
 }
 
 #lowerText {
-  top: 200px;
-  left: 150px;
+    top: 200px;
+    left: 150px;
+}
+
+.fill {
+    min-height: 100vh;
+    height: 100%;
 }
