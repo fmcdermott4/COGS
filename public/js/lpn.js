@@ -33,7 +33,7 @@ const lpnForm = async(event) => {
         rebox = parseFloat(service.data.rebox.substring(1).trim());
         budget = price * .36;
 
-        console.log("budget is " + budget);
+        console.log("Budget is " + budget);
         console.log("Function test is " + functionTest);
         console.log("Cleaning is " + cleaning);
         console.log("Manual is 2");

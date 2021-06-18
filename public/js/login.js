@@ -19,6 +19,7 @@ const loginForm = async(event) => {
             // document.location = ("/");
         } else {
             alert("Epic Fail");
+            document.location = "/login";
         }
     }
 };
