@@ -38,6 +38,12 @@ const lpnForm = async(event) => {
         console.log("Cleaning is " + cleaning);
         console.log("Manual is 2");
         console.log("Rebox is " + rebox);
+
+        // check to see if pricing exists
+        if (isNaN(functionTest)) {
+            console.log("Pricing doesn't exist");
+            alert("Set on can not test pallet");
+        } else
         // function test, clean, rebox and manual
         if (reboxCheck && manualCheck && ((functionTest + cleaning + rebox + manual) < budget)) {
             console.log("Services cost is " + (functionTest + cleaning + rebox + manual))
