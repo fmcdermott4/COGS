@@ -34,7 +34,10 @@ const lpnForm = async(event) => {
         budget = price * .36;
 
         console.log("budget is " + budget);
-
+        console.log("Function test is " + functionTest);
+        console.log("Cleaning is " + cleaning);
+        console.log("Manual is 2");
+        console.log("Rebox is " + rebox);
         // function test, clean, rebox and manual
         if (reboxCheck && manualCheck && ((functionTest + cleaning + rebox + manual) < budget)) {
             console.log("Services cost is " + (functionTest + cleaning + rebox + manual))
