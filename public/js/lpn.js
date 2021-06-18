@@ -41,40 +41,40 @@ const lpnForm = async(event) => {
         // function test, clean, rebox and manual
         if (reboxCheck && manualCheck && ((functionTest + cleaning + rebox + manual) < budget)) {
             console.log("Services cost is " + (functionTest + cleaning + rebox + manual))
-            alert("Function test, cleaning, add manual, rebox");
+            alert("Function test, clean, add manual, rebox");
         } else
         // function test, clean and rebox
         if (reboxCheck && !manualCheck && ((functionTest + rebox + cleaning) < budget)) {
             console.log("Services cost is " + (functionTest + rebox + cleaning))
-            alert("Function test, cleaning, rebox");
+            alert(lpn + " Function test, clean, rebox");
         } else
         // function test, clean and manual
         if (!reboxCheck && manualCheck && ((functionTest + cleaning + manual) < budget)) {
             console.log("Services cost is " + (functionTest + cleaning + manual))
-            alert("Function test, clean, add manual");
+            alert(lpn + " Function test, clean, add manual");
         } else // function test and clean
         if (!reboxCheck && !manualCheck && ((functionTest + cleaning) < budget)) {
             console.log("Services cost is " + (functionTest + cleaning))
-            alert("Function test, clean");
+            alert(lpn + " Function test, clean");
         } else
         // function test and rebox
         if (reboxCheck && !manualCheck && newItemCheck && ((functionTest + rebox) < budget)) {
             console.log("Services cost is " + (functionTest + rebox))
-            alert("Function test, bypass cleaning, rebox");
+            alert(lpn + " Function test, bypass cleaning, rebox");
         } else
         // function test and manual
         if (!reboxCheck && manualCheck && newItemCheck && ((functionTest + manual) < budget)) {
             console.log("Services cost is " + (functionTest + manual))
-            alert("Function test, bypass cleaning, add manual");
+            alert(lpn + " Function test, bypass cleaning, add manual");
         } else
         // function test only
         if (!reboxCheck && !manualCheck && newItemCheck) {
             console.log("Services cost is " + functionTest)
-            alert("Function test, bypass cleaning");
+            alert(lpn + " Function test, bypass cleaning");
         } else
         // COGS
         {
-            alert("COGS failure");
+            alert(lpn + " COGS failure");
         }
         document.location = "/";
         return;
