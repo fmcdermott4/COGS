@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3006;
 
 const sess = {
-    secret: 'Super secret secret',
+    secret: 'ARC will get it done',
     cookie: {},
 
     resave: false,
@@ -20,6 +20,8 @@ const sess = {
     }),
 
 };
+sess.cookie.maxAge = 288000000;
+
 app.use(session(sess));
 
 const hbs = exphbs.create({});
