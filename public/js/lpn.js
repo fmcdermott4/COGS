@@ -28,9 +28,9 @@ const lpnForm = async(event) => {
             body: JSON.stringify({ subcat }),
             headers: { "Content-Type": "application/json" },
         }).then(response => response.json()).then(data => (service = data));
-        functionTest = parseFloat(service.data.functiontest.substring(1).trim());
-        cleaning = parseFloat(service.data.cleaning.substring(1).trim());
-        rebox = parseFloat(service.data.rebox.substring(1).trim());
+        functionTest = parseFloat(service.data.functiontest.trim());
+        cleaning = parseFloat(service.data.cleaning.trim());
+        rebox = parseFloat(service.data.rebox.trim());
         budget = price * .36;
 
         console.log("Budget is " + budget);
