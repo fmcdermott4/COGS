@@ -12,6 +12,7 @@ const lpnForm = async(event) => {
     let subcat;
     let price;
     let budget;
+    let ts;
     let manual = 2;
 
     if (lpn) {
@@ -31,6 +32,7 @@ const lpnForm = async(event) => {
         functionTest = parseFloat(service.data.functiontest.trim());
         cleaning = parseFloat(service.data.cleaning.trim());
         rebox = parseFloat(service.data.rebox.trim());
+        ts = parseFloat(service.data.tech.trim());
         budget = price * .36;
 
         console.log("Budget is " + budget);
@@ -38,6 +40,7 @@ const lpnForm = async(event) => {
         console.log("Cleaning is " + cleaning);
         console.log("Manual is 2");
         console.log("Rebox is " + rebox);
+        console.log("Allowable technical services up to " + ts);
 
         // check to see if pricing exists
         if (isNaN(functionTest)) {

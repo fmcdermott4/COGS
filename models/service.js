@@ -21,6 +21,9 @@ AmazonService.init({
     },
     rebox: {
         type: DataTypes.STRING,
+    },
+    tech: {
+        type: DataTypes.STRING,
     }
 
 }, {
